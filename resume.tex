@@ -1,0 +1,93 @@
+\documentclass{resume}
+
+\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Christopher J. Buresch} 
+\address{Preferred Name: Cj \\ he/him \\ Senior Software Engineer \\ Seattle, WA} 
+\address{\href{mailto:contact@csubj.io}{contact@csubj.io} \\ \href{https://www.linkedin.com/in/csubj}{linkedin/csubj} \\ \href{https://github.com/csubj}{gh/csubj} \\  \href{https://csubj.io}{csubj.io}} 
+
+\begin{document}
+
+%----------------------------------------------------------------------------
+%	OBJECTIVE
+%----------------------------------------------------------------------------
+
+\begin{rSection}{OBJECTIVE}
+{Seeking to join a team focusing on product backend, platform, or infrastructure development. I enjoy providing massively distributed, highly available and fault-tolerant services to internal customers and working on every part of it from the metal up.}
+\end{rSection}
+
+%----------------------------------------------------------------------------
+% TECHNICAL STRENGTHS	
+%----------------------------------------------------------------------------
+\begin{rSection}{SKILLS}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Proficient Languages & Scala, Java, Python, C\#, SQL \\
+Learning Languages & Rust, Go \\
+\end{tabular}\\
+\end{rSection}
+
+\begin{rSection}{EXPERIENCE}
+
+\textbf{Senior Software Engineer} \hfill Sept 2022 - Nov 2022\\
+Blobstore (Distributed BLOB Storage), Twitter, Inc. \hfill \textit{Seattle, WA}
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Designed and implemented a new chargeback model and service for Blobstore which gave customers a more granular and accurate understanding of their app use-case over time. 
+     \item Wrote a new compliance service which would cut user access or delete out-of-compliance datasets based on signals from the InfoSec or Legal team. 
+ \end{itemize}
+
+ \textbf{ Site Reliability Engineer II} \hfill Dec 2018 - Sept 2022\\
+Blobstore (Distributed BLOB Storage), Twitter, Inc. \hfill \textit{Seattle, WA}
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Designed and built a topology-aware cluster locking service to ensure automation and deploys could operate in parallel without affecting service health. This unlocked other opportunities like automated deployments, which increased release cadence from monthly to weekly.
+     \item Wrote compliance automation for kernel and firmware updates using Airflow as an orchestration engine. Rolls 8k machines across multiple datacenters in less than 30 days with no manual intervention. 
+     \item Migrated multiple services from baremetal to Aurora (Mesos) compute clusters to ease operational burden and to improve development velocity.
+     \item Responsible for service monitoring and tooling, system health, system config, load testing, capacity planning and oncall.
+ \end{itemize}
+
+\textbf{Software Engineer} \hfill Aug 2015 - Nov 2018\\
+Dynamics, Microsoft Corporation \hfill \textit{Seattle, WA}
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Started in SRE Tier II Support, moved to SWE for more responsibilities and larger breadth of work. Supported Cloud infrastructure and service health. 
+ \end{itemize}
+\end{rSection} 
+
+%----------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+    \textbf{Bachelor of Science, Computer Science} \hfill 2011 - 2015 \\ Gonzaga University  \hfill \textit{Spokane, WA} \\ \\
+    {\bf Clubs and Activities} \\
+    \begin{tabular}{ @{} l @{\hspace{6ex}} l }
+    Men's Rowing, Div. 1 \> \textit{2011-12} & ACM ICPC, PNW \> \textit{2012, \textquotesingle13, \textquotesingle14} \\
+    Computer Science Club \> \textit{2012-15} & Math Club \> \textit{2013-15} \\
+    Cycling Club \> \textit{2013-15} & WSU Hackathon \> \textit{2015} \\
+\end{tabular}\\
+
+    \begin{tabbing}
+        \hspace{4cm} \= \hspace{5cm} \= \kill 
+        {\bf Achievements} \\
+        3rd On-Site, ACM ICPC (PNW) \textit{2013}, \textit{2014} \\
+        \end{tabbing}
+\end{rSection}
+%----------------------------------------------------------------------------
+\begin{rSection}{Leadership} 
+    \begin{itemize}
+        \item Mentored 3 new graduate hires and interns. Held bi-weekly or weekly 1:1's to help them ramp up into Twitter Engineering.
+        \item Ambassador for Twitter Seattle 2021-2022. Responsible for planning holiday events, creating opportunities for colleagues to socialize, assisting onsite operations management.
+    \end{itemize}
+\end{rSection}
+%----------------------------------------------------------------------------
+\begin{rSection}{Extra-Curricular Activities} 
+    \begin{itemize}
+        \item Avid Mountain Climber! Summited Mt. Baker, Mt. Shuksan, and Mt. Hood. 
+        \item Avid 3d Printer enthusiast! I model and print practical, or not-so-practical, objects. If you can think it, you can print it!
+    \end{itemize}
+\end{rSection}
+\end{document}
+
