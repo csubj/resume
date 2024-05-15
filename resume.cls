@@ -24,6 +24,9 @@
 \def \name#1{\def\@name{#1}} % Defines the \name command to set name
 \def \@name {} % Sets \@name to empty by default
 
+\def \nameaddition#1{\def\@nameaddition{#1}} % Defines the \name command to set name
+\def \@nameaddition {} % Sets \@name to empty by default
+
 \def \addressSep {$\diamond$} % Set default address separator to a diamond
 
 % One, two or three address lines can be specified 
@@ -47,7 +50,7 @@
 \def \printaddress #1{
   \begingroup
     \def \\ {\addressSep\ }
-    \centerline{#1}
+    \leftline{#1}
   \endgroup
   \par
   \addressskip
@@ -56,8 +59,9 @@
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
-    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-    \nameskip\break
+    \def \\ {\addressSep\ }
+    {\namesize\bf \@name} \null\hfill{\@nameaddition}
+    \break
   \endgroup
 }
 
@@ -69,6 +73,7 @@
 \renewcommand{\document}{
   \ori@document  % Begin document
   \printname % Print the name specified with \name
+  \vspace{-0.4em}
   \@ifundefined{@addressone}{}{ % Print the first address if specified
     \printaddress{\@addressone}}
   \@ifundefined{@addresstwo}{}{ % Print the second address if specified
@@ -84,7 +89,7 @@
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
   \sectionskip
-  \MakeUppercase{{\bf #1}} % Section title
+  {{\bf #1}} % Section title
   \sectionlineskip
   \noindent\rule{8cm}{0.5pt}
   \begin{list}{}{ % List for each individual item in the section
@@ -106,15 +111,15 @@
   {\em #3} \hfill {\em #4} % Italic job title and location
   }\smallskip
   \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+   \itemsep 0em \vspace{0em} % Compress items in list together for aesthetics
   }{
   \end{list}
-  \vspace{0.5em} % Some space after the list of bullet points
+  \vspace{0.2em} % Some space after the list of bullet points
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
-\def\namesize{\LARGE} % Size of the name at the top of the document
+\def\namesize{\huge} % Size of the name at the top of the document
 \def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
-\def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
-\def\nameskip{\medskip} % The space after your name at the top
-\def\sectionskip{\medskip} % The space after the heading section
+\def\sectionlineskip{\smallskip} % The space above the horizontal line for each section 
+\def\nameskip{\smallskip} % The space after your name at the top
+\def\sectionskip{\smallskip} % The space after the heading section

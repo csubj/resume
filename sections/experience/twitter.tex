@@ -1,0 +1,17 @@
+\begin{mdframed}[linewidth=2,linecolor=blue, innertopmargin=1em, innerbottommargin=1em, topline=false, rightline=false, bottomline=false]
+    \textbf{Senior Software Engineer} \hfill Dec 2018 - Nov 2022\\
+    Twitter, Inc. - Blobstore (Distributed KV Object Storage)\hfill \textit{Seattle, WA}
+    
+    As a team of 9 we stored more than 70PB of Twitter's media data in an on-prem multi-datacenter eventually consistent distributed system. As the infrastructure lead I was responsible for 8k physical machines (hardware health and lifecycle), service automation, monitoring, tooling and deployments as well as anti-entropy services while also taking feature projects. 
+    
+    {\bf Accomplishments}
+     \begin{itemize}
+        \itemsep -5pt {} 
+         \item Designed and implemented on-prem chargeback reporting improving a previously annual and manual process to an automated daily report of network, api usage, storage class, data locality charges. This had immediate impact for internal customers to understand their use-case costs and inform choices to improve their service's COGS.
+         \item Developed an environment of services and orchestrated tasks (Airflow) for infrastructure automation that ensured operators worked safely and independently without affecting service health or causing downtime. This lead to realized opportunities like no-touch deployments on stateful baremetal services and automated hardware failure remediation that eliminated weeks of developer operational toil; tangibly it reduced pages from 90/wk to 4-5/wk and increased deployments from several times a quarter to weekly for the storage tier.
+         \item Compliance automation rolled all machines in less than 25 days with no manual intervention and negligible service impact. As a result Blobstore was consistently in the top 5 of patched fleets across the company. 
+         \item Implemented anti-entropy services to scan large metadata dumps, billions of keys processed via MapReduce fed a key-list to repair workers to patch production every week. 
+         \item Migrated stateless services from baremetal to Aurora Mesos compute to ease operational burden, improve developer velocity and service reliability as well as cut 6-figures from annual COGS.
+         \item Maintained service monitoring and tooling, system health, system config, loadtesting, capacity planning and oncall.
+     \end{itemize}
+    \end{mdframed}
