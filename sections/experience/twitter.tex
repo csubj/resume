@@ -1,17 +1,25 @@
 \begin{mdframed}[linewidth=2,linecolor=blue, innertopmargin=1em, innerbottommargin=1em, topline=false, rightline=false, bottomline=false]
     \textbf{Senior Software Engineer} \hfill Dec 2018 - Nov 2022\\
     Twitter, Inc. - Blobstore (Distributed KV Object Storage)\hfill \textit{Seattle, WA}
-    
-    As a team of 9 we stored more than 70PB of Twitter's media data in an on-prem multi-datacenter eventually consistent distributed system. As the infrastructure lead I was responsible for 8k physical machines (hardware health and lifecycle), service automation, monitoring, tooling and deployments as well as anti-entropy services while also taking feature projects. 
+
+    As a team of 9, we served over 70PB at 100M requests per day of user data in an on-prem, multi-datacenter, eventually consistent distributed system developed in-house. As the infrastructure lead, I oversaw ~8,000 physical machines, compliance and chargeback reporting, hardware provisioning and automation, observability, tooling, deployments, anti-entropy services, and delivered service features.
     
     {\bf Accomplishments}
      \begin{itemize}
         \itemsep -5pt {} 
-         \item Designed and implemented on-prem chargeback reporting improving a previously annual and manual process to an automated daily report of network, api usage, storage class, data locality charges. This had immediate impact for internal customers to understand their use-case costs and inform choices to improve their service's COGS.
-         \item Developed an environment of services and orchestrated tasks (Airflow) for infrastructure automation that ensured operators worked safely and independently without affecting service health or causing downtime. This lead to realized opportunities like no-touch deployments on stateful baremetal services and automated hardware failure remediation that eliminated weeks of developer operational toil; tangibly it reduced pages from 90/wk to 4-5/wk and increased deployments from several times a quarter to weekly for the storage tier.
-         \item Compliance automation rolled all machines in less than 25 days with no manual intervention and negligible service impact. As a result Blobstore was consistently in the top 5 of patched fleets across the company. 
-         \item Implemented anti-entropy services to scan large metadata dumps, billions of keys processed via MapReduce fed a key-list to repair workers to patch production every week. 
-         \item Migrated stateless services from baremetal to Aurora Mesos compute to ease operational burden, improve developer velocity and service reliability as well as cut 6-figures from annual COGS.
-         \item Maintained service monitoring and tooling, system health, system config, loadtesting, capacity planning and oncall.
+         \item Developed and automated chargeback reporting for customer data, transforming a manual and annual process into a daily automated metric covering network, API usage, storage class, and data locality charges. 
+         \begin{itemize}
+            \item Customers could now make informed decisions and assess how service changes impact cost.
+            \item Helped the team prioritize features to help teams improve performance and cut costs like allowing customers to choose replica count per dataset or which datacenter to write to. 
+         \end{itemize}
+         \item Developed a state-aware locking service that would approve operations on the dataset allowing operators to work safely and independently without impacting service health or causing downtime. 
+         \begin{itemize}
+            \item This enabled no-touch deployments and hardware failure remediation, saving weeks of developer operational toil annually.
+            \item Oncall pages reduced from 90/wk to 4-5/wk
+            \item Deployment frequency increased from several times a quarter to weekly for stateful services and twice a week for stateless.
+         \end{itemize}
+         \item Compliance automation rolled 8k hosts in less than 25 days with no manual intervention and negligible service impact. As a result Blobstore was consistently in the top 5 of patched fleets across the company. 
+         \item Implemented anti-entropy services to scan large metadata dumps, billions of keys processed via MapReduce fed a key-list to repair workers to patch production datasets every week. 
+         \item Migrated stateless services from baremetal to Aurora Mesos compute to ease operational burden, improve developer velocity and service reliability as well as cut \$100k from annual COGS.
      \end{itemize}
     \end{mdframed}

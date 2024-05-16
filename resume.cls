@@ -24,8 +24,16 @@
 \def \name#1{\def\@name{#1}} % Defines the \name command to set name
 \def \@name {} % Sets \@name to empty by default
 
-\def \nameaddition#1{\def\@nameaddition{#1}} % Defines the \name command to set name
-\def \@nameaddition {} % Sets \@name to empty by default
+\def \contactinfo#1{\def\@contactinfo{#1}} % Defines the \name command to set name
+\def \@contactinfo {} % Sets \@name to empty by default
+
+
+\def \jobtitle#1{\def\@jobtitle{#1}} % Defines the \name command to set name
+\def \@jobtitle {} % Sets \@name to empty by default
+
+\def \identityinfo#1{\def\@identityinfo{#1}} % Defines the \name command to set name
+\def \@identityinfo {} % Sets \@name to empty by default
+
 
 \def \addressSep {$\diamond$} % Set default address separator to a diamond
 
@@ -60,7 +68,7 @@
 \def \printname {
   \begingroup
     \def \\ {\addressSep\ }
-    {\namesize\bf \@name} \null\hfill{\@nameaddition}
+    {\namesize\bf \@name} \null\hfill{\@contactinfo}
     \break
   \endgroup
 }
@@ -73,13 +81,9 @@
 \renewcommand{\document}{
   \ori@document  % Begin document
   \printname % Print the name specified with \name
-  \vspace{-0.4em}
-  \@ifundefined{@addressone}{}{ % Print the first address if specified
-    \printaddress{\@addressone}}
-  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
-    \printaddress{\@addresstwo}}
-     \@ifundefined{@addressthree}{}{ % Print the third address if specified
-    \printaddress{\@addressthree}}
+
+  \printaddress{\large \@jobtitle}
+  \printaddress{\@identityinfo}
 }
 
 %----------------------------------------------------------------------------------------
@@ -91,7 +95,7 @@
   \sectionskip
   {{\bf #1}} % Section title
   \sectionlineskip
-  \noindent\rule{8cm}{0.5pt}
+  \noindent\rule{10cm}{.8pt}
   \begin{list}{}{ % List for each individual item in the section
     \setlength{\leftmargin}{0em} % Margin within the section
   }
@@ -111,10 +115,10 @@
   {\em #3} \hfill {\em #4} % Italic job title and location
   }\smallskip
   \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep 0em \vspace{0em} % Compress items in list together for aesthetics
+   \itemsep -1em \vspace{-1em} % Compress items in list together for aesthetics
   }{
   \end{list}
-  \vspace{0.2em} % Some space after the list of bullet points
+  \vspace{-0.5em} % Some space after the list of bullet points
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
