@@ -1,7 +1,7 @@
 \ProvidesClass{resume}[2023/06/05 v0.1 csubj Resume class]
 
 \LoadClass[11pt, a4paper]{article} % Font size and paper type
-
+\usepackage[T1]{fontenc}
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
