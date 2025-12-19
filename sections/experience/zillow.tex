@@ -2,12 +2,11 @@
 \textbf{Senior Software Engineer} \hfill July 2023 - Present\\
 Zillow Group, Inc. \hfill \textit{Seattle, WA}
 
-Designed and leading the transition of Zillow’s Industry Software DevOps teams into a self-service compute platform for >200 engineers. Responsible for operational duties, infrastructure and tooling architecture, maintainer on platform tooling and services. [AWS, EKS K8s, Terraform, Golang and Python, Gitlab CI.]
+Leading a team of nine engineers on Industry Software DevOps team through a transition to a self-service compute platform for >200 engineers. Responsible for infrastructure, operational duties, production readiness, tooling architecture, and maintaining homegrown platform tooling and services.
 \begin{itemize}
-    \item Leading a team of nine engineers to transform the culture and processes of a traditional centralized DevOps team to a platform engineering support model; delivering self-service tooling and compute via an incremental approach to minimize risks and maximize impact.
-    \item Founder and maintainer of the team's bazel monorepo, migrating all code and services to a single repository to simplify the build process, increase code reuse, reduce abandoned code, and keep dependencies up to date uniformly.
-    \item Develops the yearly roadmap to align with business priorities while also triaging tech debt.  
-    \item Drove adoption of platform tooling across 19 teams and hundreds of services to standardize deployments. Tooling improved deployment feedback and ergonomics which improved developer velocity while also adding observability and reporting from
-    \item Rewrote EKS cluster definitions and cluster bootstrap process, added functionality to allow for ephemeral compute and easier A/B testing with our kubernetes stack and faster iteration on platform changes, disaster recovery and kubernetes version upgrades.
+    \item Transforming culture and processes at the local and org level from a traditional centralized DevOps team to a platform engineering model; shifting our offerings incrementally to minimize risks and maximize impact. Maintains the quarterly roadmap to align with business priorities while also triaging tech debt. Meets with tenants to understand the highest impact work for tenant teams.  
+    \item Overhauling compute infrastructure to be more flexible and to follow a repeatable lifecycle by rebuilding our pet clusters into cattle, created tooling to manage k8s resources instead of handcrafting important config. Cluster can be managed almost as ephemeral resources and now we can test dangerous cluster changes in sterile environments outside of tenant workloads to avoid impact from infrastructure changes. 
+    \item Founder and maintainer of the team's bazel monorepo, migrating service and tool code to a single repository to reduce cognitive context load, increase code reuse, reduce abandoned code, and keep dependencies up to date uniformly.
+    \item Drove adoption of in-house CICD tooling across 19 teams and hundreds of services and jobs to standardize deployments. Tooling improved deployment feedback and ergonomics, reduced deploy failures by 20\% and increased developer confidence in their deploys and their overall velocity while adding functionality that was configurable directly by service owners.   
 \end{itemize}
 \end{mdframed}
